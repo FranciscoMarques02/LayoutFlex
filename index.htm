@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Flex</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: auto;
+            background-color: white;
+        }
+
+        .cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2E6BAD;
+            color: white;
+            flex-direction: column;
+            padding: 50px;
+        }
+
+        .menu {
+            display: flex;
+            background-color: #333333;
+        }
+
+        .menu a {
+            padding: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #504e4e;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .corpo {
+            display: flex;
+        }
+
+        .lateral {
+            width: 25%;
+            padding: 15px;
+            background-color: #F1F1F1;
+        }
+
+        .lateral img {
+            border: 1px solid #DDDDDD;
+            border-radius: 4px;
+            padding: 5px;
+            width: 300px;
+        }
+
+        .conteudo img,
+        .lateral img,
+        .logo img {
+            max-width: 100%;
+        }
+
+        .conteudo {
+            width: 75%;
+            padding: 50px;
+        }
+
+        .rodape {
+            background-color: #DDDDDD;
+            text-align: center;
+            font-weight: bold;
+            padding: 30px;
+        }
+        /* Quando o largura da tela for menor que 500px */
+        @media screen and (max-width: 500px) {
+            .menu{
+                flex-direction: column;
+                text-align: center;
+            }
+            .corpo{
+                flex-direction: column;
+            }
+            .conteudo{
+                width: 100%;
+                order: 1;
+            }
+            .lateral{
+                width: 100%;
+                order: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cabecalho">
+            <h1>Senac São Paulo</h1>
+            <p>Desenvolvimento de layout com <b>flex</b> layout.</p>
+        </div>
+
+        <div class="menu">
+            <a href="#">Início</a>
+            <a href="#">Loja</a>
+            <a href="#">Contato</a>
+            <a href="#">Sobre</a>
+        </div>
+
+        <div class="corpo">
+            <div class="lateral">
+                <h2>O Senac</h2>
+
+                <img src="img/imglateral.png" alt="Senac">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Harum, numquam dicta doloribus, labore ea perspiciatis,
+                    alias suscipit aliquam omnis expedita optio. Nam odio
+                    dignissimos veritatis recusandae error ea optio eveniet!</p>
+            </div>
+
+            <div class="conteudo">
+                <h2>Título da Postagem</h2>
+
+                <p>Francisco Marques, Feb 15, 2023</p>
+
+                <img src="img/imgsenac.jpg" alt="Senac Pinda" width="800px">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Pariatur ullam inventore minus voluptas enim aspernatur
+                    exercitationem. Maiores maxime odio praesentium nobis blanditiis,
+                    ullam numquam, modi, obcaecati iusto excepturi eos accusamus.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum velit natus eaque! Molestias
+                    similique et corrupti vel esse. Neque vitae error odit illum! Enim nam dolore quibusdam corrupti
+                    magni praesentium.</p>
+            </div>
+        </div>
+
+        <div class="rodape">
+            <p>&copy; SENAC Pindamonhangaba - 2023</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
